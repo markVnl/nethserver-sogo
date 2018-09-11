@@ -48,6 +48,7 @@ echo "%doc README.rst" >> %{name}-%{version}-filelist
 
 %files -f %{name}-%{version}-filelist
 %defattr(-,root,root)
+%config(noreplace) %{_sysconfdir}/httpd/conf.d/zzz_SOGo.conf
 %dir %{_nseventsdir}/%{name}-update
 
 %changelog
